@@ -1,0 +1,75 @@
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+body{
+    background-image: url("img/register.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: 'montserrat', sans-serif;
+}
+.brand h1{
+    font-family: 'Eagle Lake', cursive;
+}
+.form-group{
+    margin-top: 30px!important;
+}
+a{
+    color: #D31027;
+}
+a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+.form-group input{
+    text-align: center;
+    background-color: transparent!important;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    outline: none;
+    width: 150px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+.form-group input:focus{
+    width: 200px;
+}

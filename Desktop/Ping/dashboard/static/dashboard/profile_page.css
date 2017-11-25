@@ -1,0 +1,17 @@
+.btn-settings{
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #D31027;
+}
+.btn-settings:hover{
+    color: #D31027;
+    border-color: #D31027;
+    background-color: #ffffff;
+}
+.btn-settings a{
+    color: #ffffff;
+}
+.btn-settings a:hover{
+    color: #D31027;
+    text-decoration: none;
+}

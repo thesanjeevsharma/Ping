@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>{% block title %}Ping | Log In{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/index.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Eagle+Lake" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'dashboard/img/Ping.png' %}" type="image/x-icon">
+</head>
+<body id="body-image">
+<div class="container">
+    <div class="row brand" style="margin-top: 50px;">
+        <div class="col-lg-12">
+            <center><h1>Ping</h1></center>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-lg-8 col-sm-12">
+            <img src="{% static 'dashboard/img/Ping.png' %}" class="img-responsive">
+        </div>
+        <div class="col-lg-4 col-sm-12">
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+    <form class="form-horizontal" role="form" action="{% url 'dashboard:login_user' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <div>
+                <input id="id_username" maxlength="30" name="username" type="text" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <input id="id_password" maxlength="30" name="password" type="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <button type="submit" class="btn btn-search">Log In</button>
+            </div>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="{% url 'dashboard:register' %}">Click here</a> to register.</p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

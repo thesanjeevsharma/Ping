@@ -1,0 +1,22 @@
+{% extends 'dashboard/base.html' %}
+{% load staticfiles %}
+{% block title %} Dashboard {% endblock %}
+{% block body %}
+<div class="container">
+    {% for post in posts %}
+        <div class="row card-row">
+            <div class="col-lg-8">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" src="{{ post.post_pic.url }}" alt="[Image not displayed!]">
+              <div class="card-body">
+                <h6 class="card-title">@{{ post.post_by }}</h6>
+                <p class="card-text">{{ post.post_text }}<br/>[{{  post.time.time  }}] {{ post.time.date }}</p>
+                <a href="{% url 'dashboard:saved' post.id %}"><i class="fa fa-2x {% if post.saved %}fa-thumb-tack{% endif %}"></i></a>&nbsp;
+                  <a href="{% url 'dashboard:comment' post.id %}"><i class="fa fa-2x fa-comment-o" aria-hidden="true"></i></a>
+              </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

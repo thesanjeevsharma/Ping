@@ -1,0 +1,64 @@
+body{
+    background-color: rgba(0,0,0,0.9);
+    color: #ffffff;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.navbar-custom{
+  background: red!important; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,#D31027, #EA384D)!important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,#D31027, #EA384D)!important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #D31027, #EA384D)!important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #D31027 , #EA384D)!important; /* Standard syntax */
+}
+.navbar-custom a{
+    color: #ffffff;
+}
+.nav-item{
+    border-bottom:1px solid transparent!important;
+}
+.nav-item:hover{
+    border-bottom:1px solid white!important;
+    transition: 1s ease;
+}
+.btn-search{
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #D31027;
+}
+.btn-search:hover{
+    color: #D31027;
+    border-color: #D31027;
+    background-color: #ffffff;
+}
+.card-row{
+    margin-top: 50px!important;
+    color: rgba(0,0,0,0.9);
+}
+.card-row .card{
+    border-color: #D31027;
+    border-width: 2px;
+}
+.card-row .card img{
+    width: 100%;
+    height: auto;
+}
+.card-row .card a{
+    color: #D31027;
+}
+.navbar input{
+    background: transparent!important;
+    border-radius: none!important;
+    border: none;
+    outline: none!important;
+    border-bottom: 1px solid white;
+}
+.dropdown-item{
+    color: #D31027!important;
+}
+.dropdown-item:hover{
+    color: #ffffff!important;
+    background: #D31027;
+}
